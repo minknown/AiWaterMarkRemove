@@ -13,8 +13,14 @@ AI去除水印，无需提前框选水印位置、长久性免费 。
 5、支持API调用
 
 ## 使用方法
-UI使用：
-(https://sv.facevpm.xyz/index.php](https://sv.facevpm.xyz/index.php)  
+UI使用： 
+https://sv.facevpm.xyz/index.php    
+API使用：
+https://sv.facevpm.xyz/index.php?action=upload&creat=yes&domain=xxx&user_ip=yyy&wm_text=zzz&wm_pos=0-5    
+务必使用POST，action=upload&creat=yes为固定参数。    
+其中wm_text表示水印文字（中文需编码），wm_pos表示水印位置，支持填写0-4，0随机1左上角。user_ip为您的任一随机用户名，自己给自己起，一般6位数以上英文即可。    
+domain表示回调域名，即去除成功后会发送通知到该域名下的fininsh.php接口中，会传入id和url，url表示去除后的视频下载地址。id表示任务ID。     
+
 
 
 
