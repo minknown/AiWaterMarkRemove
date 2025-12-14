@@ -14,11 +14,13 @@ AI去除水印，无需提前框选水印位置、长久性免费 。
 缺点：修复效果不是很好，但是能精准识别水印并摸除，对于盗用视频、搬家视频等各大博主其实已经够用了。    
 
 ## 使用方法
-UI使用： 
+
+UI图形界面使用： 
 https://sv.facevpm.xyz/index.php    
+
 API使用：
-https://sv.facevpm.xyz/index.php?action=upload&creat=yes&domain=xxx&user_ip=yyy&wm_text=zzz&wm_pos=0-5    
-务必使用POST，action=upload&creat=yes为固定参数。    
+https://sv.facevpm.xyz/index.php?action=upload&creat=yes&name=video_file&domain=xxx&user_ip=yyy&wm_text=zzz&wm_pos=0-5    
+API使用则务必使用POST，action=upload&creat=yes为固定参数。name为待处理的上传的视频文件    
 其中wm_text表示水印文字（中文需编码），wm_pos表示水印位置，支持填写0-4，0随机1左上角。user_ip为您的任一随机用户名，自己给自己起，一般6位数以上英文即可。    
 domain表示回调域名，即去除成功后会发送通知到该域名下的fininsh.php接口中，会传入id和url，url表示去除后的视频下载地址。id表示任务ID。     
 
