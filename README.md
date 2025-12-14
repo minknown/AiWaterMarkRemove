@@ -9,22 +9,22 @@ AI去除水印，无需提前框选水印位置、长久性免费 。
 1、无需提前框选水印位置（业界首创）。   
 2、去除率高达100%。    
 3、云端处理，不占用电脑CPU和内存。    
-3、长期性免费。     
-4、支持API调用。     
+4、长期性免费。     
+5、支持API调用。     
 缺点：修复效果不是很好，但是能精准识别水印并摸除，对于盗用视频、搬家视频等各大博主其实已经够用了。    
 
-## 使用方法
-z
+## 使用方法\
+
 UI图形界面使用： 
 https://sv.facevpm.xyz/index.php    
 
 API使用：
 https://sv.facevpm.xyz/index.php?action=upload&creat=yes&name=video_file&domain=xxx&user_ip=yyy&wm_text=zzz&wm_pos=0-5    
-API使用则务必使用POST，action=upload&creat=yes为固定参数。name为待处理的上传的视频文件    
-其中wm_text表示水印文字（中文需编码），wm_pos表示水印位置，支持填写0-4，0随机1左上角。user_ip为您的任一随机用户名，自己给自己起，一般6位数以上英文即可。    
+API使用则务必使用POST，action=upload&creat=yes为固定参数。name为待处理的上传的视频文件     
+其中wm_text表示水印文字（中文需编码），不需要新增水印可以填写N，wm_pos表示水印位置，支持填写0-4，0随机1左上角。user_ip为您的任一随机用户名，自己给自己起，一般6位数以上英文即可。    
 domain表示回调域名，即去除成功后会发送通知到该域名下的fininsh.php接口中，会传入id和url，url表示去除后的视频下载地址。id表示任务ID。     
-
-z注意：由于服务器处理压力，目前最大支持500MB的MP4S视频文件。     
+（然后可以通过index.php?way=check&id=xxxxx检查视频任务是否处理完成，完成返回1。也可以在回调接口中做后续逻辑）      
+注意：由于服务器处理压力，目前最大支持500MB的MP4S视频文件。     
 
 
 
